@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>A-Frame Click & Drag Component - Basic</title>
+        
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
+        
+
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+        
+          
+      
+      
+        
+    </head>
+    <body>
+        <a-scene physics="gravity: -9.8">
+          <a-camera position="0 4 3">
+            <a-cursor color="#000000"></a-cursor>
+          </a-camera>
+          <a-entity progressive-controls position="0 0 5"></a-entity>
+
+          <a-plane color="#000000" scale="50 50 1" repeat="5 5 1" rotation="-90 0 0" static-body></a-plane>
+          <!--red-->
+          <a-box color="AA0000" position="-3.5 0.5 -4"></a-box>
+          <!--green-->
+          <a-sphere color="#00AA00" radius="0.5" position="-1 4 -4" grabbable
+                    dynamic-body="linearDamping: 0.05"></a-sphere>
+          <!--yellow -->
+          <a-sphere color="#FFAA00" radius="0.5" position="1 4 -4" grabbable
+          dynamic-body="linearDamping: 0.5; angularDamping: 0.3"></a-sphere>
+
+          <a-box color="#00AAFF" position="3.5 2 -4"></a-box>
+
+          
+        </a-scene>
+           
+    </body>
+    
+
+</html>
+    
+  
